@@ -11,6 +11,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
         <script src="https://unpkg.com/vue-router"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+        <link rel="stylesheet" href="css/carousel.css">
     </head>
     <body>
     <div id="app">
@@ -60,6 +61,7 @@
     <script src="pages/connexion.vue.js"></script>
     <script src="pages/contact.vue.js"></script>
     <script src="pages/jeux.vue.js"></script>
+    <script src="pages/profil.vue.js"></script>
 
         <script>
             var routes = [
@@ -67,6 +69,7 @@
                 {path: '/connexion', name: "Connexion", component: Connexion},
                 {path: '/contact', name: "Contact",component: Contact},
                 {path: '/jeux',name: "Jeux",component: Jeux},
+                {path: '/profil',name: "Profil",component: Profil}
             ];
             var router = new VueRouter(
                 {routes: routes}
