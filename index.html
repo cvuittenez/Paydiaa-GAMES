@@ -4,17 +4,21 @@
         <meta charset="UTF-8">
         <title>Paydiaa Games | Accueil</title>
         <link href="css/style.css" rel="stylesheet">
-        <link href="css/cartes_catégories.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-        <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+        <link href="css/cartes_categories.css" rel="stylesheet">
+        <!-- VueJS -->
+        <script src="https://cdn.jsdelivr.net/npm/vue" ></script>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+        <script src="https://unpkg.com/vue-router"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     </head>
     <body>
+    <div id="app">
         <header>
             <div class="logo_header">
-                <a href="index.html">
+                <router-link to="/">
                     <img src="img/logo.png" title="Accueil" width="65" alt="Logo Paydiaa Games">
-                </a>
+                </router-link>
             </div>
             <nav class="boutons_header">
                 <ul class="boutons_header_ul">
@@ -24,9 +28,9 @@
                         </a>
                     </li>
                     <li class="boutons_header_li">
-                        <a href="jeux.html" class="boutons_header_a" title="Jeux">
+                        <router-link href="jeux.html" class="boutons_header_a" to="/jeux">
                             Jeux
-                        </a>
+                        </router-link>
                     </li>
                     <li class="boutons_header_li">
                         <a class="boutons_header_a" title="Boutique">
@@ -34,99 +38,44 @@
                         </a>
                     </li>
                     <li class="boutons_header_li">
-                        <a class="boutons_header_a" title="Contact">
+                        <router-link class="boutons_header_a" to="/contact">
                             Contact
-                        </a>
+                        </router-link>
                     </li>
                     <li class="boutons_header_li">
-                        <a class="boutons_header_a" title="Profil" href="connexion.html">
+                        <router-link class="boutons_header_a" to="/connexion">
                             Profil
-                        </a>
+                        </router-link>
                     </li>
                 </ul>
             </nav>
         </header>
-        <main>
-            <img src="img/fond.png" alt="fond" class="fond">
-            <div class="barre-de-recherche">
-                <input type="search" id="site-search" name="q" aria-label="Rechercher un jeu" placeholder="Rechercher un jeu...">
-                <a class="voir-jeux" href="jeux.html">Voir tous les jeux</a>
-            </div>
-            <div class="jeux_semaine">
-                <h2>Jeux de la semaine</h2>
-                <div class="contenu_semaine">
-                    <div class="contenu_gauche">
-                        <img src="img/la_bonne_paye.png" alt="La Bonne Paye">
-                        <button class="voir_règles" type="button">Voir les règles</button>
-                    </div>
-                    <div class="contenu_droite">
-                        <div>
-                            <h4>La Bonne Paye</h4>
-                            <p>Jeu de société, à jouer a plusieurs (2 joueurs minimum)</p>
-                        </div>
-                        <button class="voir_jeu" type="button">Voir la page du jeu</button>
-                    </div>
-                </div>
-            </div>
-            <h3>CATÉGORIES DE JEUX</h3>
-            <div class="cartes">
-                <div class="container">
-                    <div class="box">
-                        <h2 class="name">Jeux en famille</h2>
-                        <a href="#" class="infos">Accéder</a>
-                        <div class="circle"></div>
-                        <img src="img/carte_jeux_en_famille.png" class="jeu">
-                    </div>
-                    <div class="box">
-                        <h2 class="name">Jeux de cartes classiques</h2>
-                        <a href="#" class="infos">Accéder</a>
-                        <div class="circle"></div>
-                        <img src="img/carte_jeux_de_cartes_classiques.png" class="jeu">
-                    </div>
-                    <div class="box">
-                        <h2 class="name">Jeux de stratégie</h2>
-                        <a href="#" class="infos">Accéder</a>
-                        <div class="circle"></div>
-                        <img src="img/carte_jeux_de_stratégie.png" class="jeu">
-                    </div>
-                    <div class="box">
-                        <h2 class="name">Jeux pour enfants</h2>
-                        <a href="#" class="infos">Accéder</a>
-                        <div class="circle"></div>
-                        <img src="img/carte_jeux_pour_enfants.png" class="jeu">
-                    </div>
-                    <div class="box">
-                        <h2 class="name">Jeux de bars</h2>
-                        <a href="#" class="infos">Accéder</a>
-                        <div class="circle"></div>
-                        <img src="img/carte_jeux_de_bars.png" class="jeu">
-                    </div>
-                    <div class="box">
-                        <h2 class="name">Jeux de rôle</h2>
-                        <a href="#" class="infos">Accéder</a>
-                        <div class="circle"></div>
-                        <img src="img/carte_jeux_de_role.png" class="jeu">
-                    </div>
-                    <div class="box">
-                        <h2 class="name">Jeux d'argent</h2>
-                        <a href="#" class="infos">Accéder</a>
-                        <div class="circle"></div>
-                        <img src="img/carte_jeux_argent.png" class="jeu">
-                    </div>
-                    <div class="box">
-                        <h2 class="name">Jeux de diplomatie</h2>
-                        <a href="#" class="infos">Accéder</a>
-                        <div class="circle"></div>
-                        <img src="img/carte_jeux_diplomatie.png" class="jeu">
-                    </div>
-                    <div class="box">
-                        <h2 class="name">Jeux d'ambiance</h2>
-                        <a href="#" class="infos">Accéder</a>
-                        <div class="circle"></div>
-                        <img src="img/carte_jeux_ambiance.png" class="jeu">
-                    </div>
-                </div>
-            </div>
-        </main>
+        <!--Point d'insertion des composants-->
+        <router-view>
+
+        </router-view>
+    </div>
+
+    <script src="pages/accueil.vue.js"></script>
+    <script src="pages/connexion.vue.js"></script>
+    <script src="pages/contact.vue.js"></script>
+    <script src="pages/jeux.vue.js"></script>
+
+        <script>
+            var routes = [
+                {path: '/', name: "Accueil", component: Accueil},
+                {path: '/connexion', name: "Connexion", component: Connexion},
+                {path: '/contact', name: "Contact",component: Contact},
+                {path: '/jeux',name: "Jeux",component: Jeux},
+            ];
+            var router = new VueRouter(
+                {routes: routes}
+            );
+            var app = new Vue({
+                el: "#app",
+                router:router
+            });
+        </script>
+
     </body>
 </html>
