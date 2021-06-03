@@ -1,80 +1,45 @@
 var Profil = Vue.component('Profil',{
     template:` 
- 
- <header>
-            <div className="logo_header">
-                <a href="../index.html">
-                    <img src="../img/logo.png" title="Accueil" width="65" alt="Logo Paydiaa Games">
-                </a>
-            </div>
-            <nav className="boutons_header">
-                <ul className="boutons_header_ul">
-                    <li className="boutons_header_li">
-                        <a className="boutons_header_accueil" title="Accueil">
-                            PAYDIAA GAMES
-                        </a>
-                    </li>
-                    <li className="boutons_header_li">
-                        <a href="jeux.html" className="boutons_header_a" title="Jeux">
-                            Jeux
-                        </a>
-                    </li>
-                    <li className="boutons_header_li">
-                        <a className="boutons_header_a" title="Boutique">
-                            Boutique
-                        </a>
-                    </li>
-                    <li className="boutons_header_li">
-                        <a className="boutons_header_a" title="Contact">
-                            Contact
-                        </a>
-                    </li>
-                    <li className="boutons_header_li">
-                        <a className="boutons_header_a" title="Profil" href="connexion.html">
-                            Profil
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+    <div class="template">
         <main>
-            <img src="../img/fond6.png" alt="fond" className="fond">
-            <div className="profil">
-                <img src="../img/avatar_placeholder.png" alt="photo_de_profil" className="pdp">
+            <img src="img/fond6.png" alt="fond" class="fond">
+            <div class="profil">
+                <img src="img/avatar_placeholder.png" alt="photo_de_profil" class="pdp">
                 <svg xmlns="http://www.w3.org/2000/svg" width="1.5" height="254.167" viewBox="0 0 1.5 254.167">
                     <line id="Ligne_36" data-name="Ligne 36" x2="0.5" y2="254.165" transform="translate(0.5 0.001)" fill="none" stroke="#000" stroke-width="1"/>
                 </svg>
-                <div className="pseudo_infos">
-                    <h2 className="pseudo">Jean77</h2>
-                    <p className="infos_profil">Membre depuis Juillet 2020</p>
+                <div class="pseudo_infos">
+                    <h2 class="pseudo">Jean77</h2>
+                    <p class="infos_profil">Membre depuis Juillet 2020</p>
                 </div>
                 <div id="favoris">
-                    <img src="../img/favoris_jeux_de_role.png" alt="jeux de role" className="favoris1">
-                    <img src="../img/favoris_la_bonne_paye.png" alt="la bonne paye" className="favoris2">
-                    <img src="../img/favoris_risk.png" alt="risk" className="favoris3">
+                    <img src="img/favoris_jeux_de_role.png" alt="jeux de role" class="favoris1">
+                    <img src="img/favoris_la_bonne_paye.png" alt="la bonne paye" class="favoris2">
+                    <img src="img/favoris_risk.png" alt="risk" class="favoris3">
                     <button>Modifier les informations</button>
                 </div>
             </div>
-            <button className="bouton_pdp">Modifier l'image de profil</button>
-            <h2 className="derniers_avis">Derniers avis</h2>
-            <div className="avis">
-                <div className="avis1">
-                    <p className="jeu_avis">Risk</p>
-                    <p className="note_avis">★★★★★</p>
-                    <p className="commentaire_avis">"Ce jeu de stratégie est chanmé"</p>
+            <button class="bouton_pdp">Modifier l'image de profil</button>
+            <h2 class="derniers_avis">Derniers avis</h2>
+            <div class="avis">
+                <div class="avis1">
+                    <p class="jeu_avis">Risk</p>
+                    <p class="note_avis">★★★★★</p>
+                    <p class="commentaire_avis">"Ce jeu de stratégie est chanmé"</p>
                 </div>
-                <div className="avis2">
-                    <p className="jeu_avis">La Bonne Paye</p>
-                    <p className="note_avis">★★★★☆</p>
-                    <p className="commentaire_avis">"Jeu très sympas en famille, je recommande"</p>
+                <div class="avis2">
+                    <p class="jeu_avis">La Bonne Paye</p>
+                    <p class="note_avis">★★★★☆</p>
+                    <p class="commentaire_avis">"Jeu très sympas en famille, je recommande"</p>
                 </div>
-                <div className="avis3">
-                    <p className="jeu_avis">UNO</p>
-                    <p className="note_avis">★☆☆☆☆</p>
-                    <p className="commentaire_avis">"Je me suis pris un +4 j'ai envie de crever"</p>
+                <div class="avis3">
+                    <p class="jeu_avis">UNO</p>
+                    <p class="note_avis">★☆☆☆☆</p>
+                    <p class="commentaire_avis">"Je me suis pris un +4 j'ai envie de crever"</p>
                 </div>
             </div>
         </main>
+    </div>    
            `,
     data(){
         return{}

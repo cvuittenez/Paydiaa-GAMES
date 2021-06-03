@@ -3,17 +3,20 @@ var Contact = Vue.component('Contact',{
 
     <div class="template">
     <img src="img/fond4.png" alt="fond" class="fond">
+      
         <form class="cases" @submit.prevent="sendEmail">
-            <label class="texte_creation">Adresse mail</label>
+            <label>Adresse mail</label>
             <input type="text" name="email" id="mail" required>
-            <label class="texte_creation">Votre pseudo</label>
+            <label>Votre pseudo</label>
             <input type="text" name="from_name" id="pseudo" required>
-            <label class="texte_creation">Objet</label>
+            <label>Objet</label>
             <input type="text" name="name" id="objet" required>
-            <label class="texte_creation">Message</label>
+            <label>Message</label>
             <textarea cols="30" rows="20" name="message" id="message" required></textarea>
             <input class="envoi" type="submit" value="Send">
         </form>
+        
+        
 
 
         <p class="reseaux-sociaux">Retrouvez nous également sur les réseaux sociaux :<strong><br>@paydiaa_games !</strong></p>

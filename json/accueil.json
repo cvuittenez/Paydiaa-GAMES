@@ -1,0 +1,9 @@
+[
+  {
+    "id": "accueil",
+    "image" : "img/la_bonne_paye.png",
+    "titre" : "La bonne paye",
+    "description": "Jeu de société, à jouer a plusieurs ",
+    "joueurs" : "2"
+  }
+]

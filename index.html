@@ -24,19 +24,19 @@
             <nav class="boutons_header">
                 <ul class="boutons_header_ul">
                     <li class="boutons_header_li">
-                        <a class="boutons_header_accueil" title="Accueil">
+                        <router-link class="boutons_header_accueil" to="/">
                             PAYDIAA GAMES
-                        </a>
+                        </router-link>
                     </li>
                     <li class="boutons_header_li">
-                        <router-link href="jeux.html" class="boutons_header_a" to="/jeux">
+                        <router-link class="boutons_header_a" to="/jeux">
                             Jeux
                         </router-link>
                     </li>
                     <li class="boutons_header_li">
-                        <a class="boutons_header_a" title="Boutique">
+                        <router-link class="boutons_header_a" to="/boutique">
                             Boutique
-                        </a>
+                        </router-link>
                     </li>
                     <li class="boutons_header_li">
                         <router-link class="boutons_header_a" to="/contact">
@@ -44,8 +44,13 @@
                         </router-link>
                     </li>
                     <li class="boutons_header_li">
-                        <router-link class="boutons_header_a" to="/connexion">
+                        <router-link class="boutons_header_a" to="/profil">
                             Profil
+                        </router-link>
+                    </li>
+                    <li class="boutons_header_li">
+                        <router-link class="boutons_header_a" to="/connexion">
+                            Connexion
                         </router-link>
                     </li>
                 </ul>
@@ -55,6 +60,30 @@
         <router-view>
 
         </router-view>
+        <footer>
+            <div class="cadre1">
+                <p class="titre_footer">Mentions légales</p>
+                <router-link class="mentions_legales" to="/mentions_legales">En savoir plus</router-link>
+            </div>
+            <div class="cadre2">
+                <p class="titre_footer">Réseaux sociaux</p>
+                <a href="https://www.facebook.com/Paydiaa-Games-102927561903644" title="facebook">
+                    <img src="img/facebook.svg" height="30" alt="facebook" class="facebook">
+                </a>
+                <a href="https://www.behance.net/paydiaagames_" title="behance">
+                    <img src="img/behance.svg" height="30" alt="behance" class="behance">
+                </a>
+                <a href="" title="instagram">
+                    <img src="img/instagram.svg" height="30" alt="instagram" class="instagram">
+                </a>
+                <a href="https://dribbble.com/Paydiaa" title="dribbble">
+                    <img src="img/dribbble.svg" height="30" alt="dribbble" class="dribbble">
+                </a>
+                <a href="https://twitter.com/paydiaa" title="twitter">
+                    <img src="img/twitter.svg" height="30" alt="twitter" class="twitter">
+                </a>
+            </div>
+        </footer>
     </div>
 
     <script src="pages/accueil.vue.js"></script>
@@ -62,14 +91,20 @@
     <script src="pages/contact.vue.js"></script>
     <script src="pages/jeux.vue.js"></script>
     <script src="pages/profil.vue.js"></script>
+    <script src="pages/boutique.vue.js"></script>
+    <script src="pages/mentions_legales.vue.js"></script>
+    <script src="pages/jeu.vue.js"></script>
 
-        <script>
+    <script>
             var routes = [
                 {path: '/', name: "Accueil", component: Accueil},
                 {path: '/connexion', name: "Connexion", component: Connexion},
                 {path: '/contact', name: "Contact",component: Contact},
                 {path: '/jeux',name: "Jeux",component: Jeux},
-                {path: '/profil',name: "Profil",component: Profil}
+                {path: '/profil',name: "Profil",component: Profil},
+                {path: '/boutique',name: "Boutique",component: Boutique},
+                {path: '/mentions_legales',name: "Mentions legales",component: Mentions_legales},
+                {path: '/jeu',name: "jeu",component: jeu}
             ];
             var router = new VueRouter(
                 {routes: routes}
@@ -78,7 +113,14 @@
                 el: "#app",
                 router:router
             });
-        </script>
-
+    </script>
+    <script>
+        const derouler = document.getElementsByClassName('section');
+        for (i = 0; i<derouler.length; i++ ){
+            derouler[i].addEventListener('click', function (){
+                this.classList.toggle('active')
+            })
+        }
+    </script>
     </body>
 </html>

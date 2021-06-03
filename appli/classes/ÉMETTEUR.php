@@ -1,10 +1,9 @@
 <?php
+require_once 'COMPTE.php';
 
 /* Generated from GenMyModel */
 
-class COMPTE {
-	public $id_membre;
-
+class ÉMETTEUR extends COMPTE {
     /**
      * @return mixed
      */
@@ -196,16 +195,56 @@ class COMPTE {
     {
         $this->adresse_mail = $adresse_mail;
     }
-	public $pseudo;
-	public $libelle_membre;
-	public $date_creation;
-	public $mot_de_passe;
-	public $categorie_preferee;
-	public $type;
-	public $role;
-	public $nom;
-	public $prenom;
-	public $avatar;
-	public $adresse_mail;
+
+    /**
+     * @return mixed
+     */
+    public function getIdMembreReceveur()
+    {
+        return $this->id_membre_receveur;
+    }
+
+    /**
+     * @param mixed $id_membre_receveur
+     */
+    public function setIdMembreReceveur($id_membre_receveur)
+    {
+        $this->id_membre_receveur = $id_membre_receveur;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDateCommentaire()
+    {
+        return $this->date_Commentaire;
+    }
+
+    /**
+     * @param mixed $date_Commentaire
+     */
+    public function setDateCommentaire($date_Commentaire)
+    {
+        $this->date_Commentaire = $date_Commentaire;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getText()
+    {
+        return $this->text;
+    }
+
+    /**
+     * @param mixed $text
+     */
+    public function setText($text)
+    {
+        $this->text = $text;
+    }
+	public $id_membre_receveur;
+	public $date_Commentaire;
+	public $text;
 	
 }

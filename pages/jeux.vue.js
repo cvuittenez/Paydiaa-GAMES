@@ -27,7 +27,7 @@ var Jeux = Vue.component('Jeux',{
                         <h2 class="name">Jeux de stratégie</h2>
                         <a href="#" class="infos">Accéder</a>
                         <div class="circle"></div>
-                        <img src="img/carte_jeux_de_stratégie.png" class="jeu">
+                        <img src="img/carte_jeux_de_strategie.png" class="jeu">
                     </div>
                     <div class="box">
                         <h2 class="name">Jeux pour enfants</h2>
@@ -68,6 +68,64 @@ var Jeux = Vue.component('Jeux',{
                 </div>
             </div>
             <h3>JEUX</h3>
+            <div class="cartes">
+                <div class="container">
+                    <div class="box">
+                        <h2 class="name">UNO</h2>
+                        <a href="#" class="infos">Accéder</a>
+                        <div class="circle"></div>
+                        <img src="img/jeu_uno.jpg" class="jeu">
+                    </div>
+                    <div class="box">
+                        <h2 class="name">RISK</h2>
+                        <a href="#" class="infos">Accéder</a>
+                        <div class="circle"></div>
+                        <img src="img/jeu_risk.png" class="jeu">
+                    </div>
+                    <div class="box">
+                        <h2 class="name">Monopoly</h2>
+                        <a href="#" class="infos">Accéder</a>
+                        <div class="circle"></div>
+                        <img src="img/jeu_monopoly.png" class="jeu">
+                    </div>
+                    <div class="box">
+                        <h2 class="name">La Bonne Paye</h2>
+                        <router-link to="/jeu" class="infos">Accéder</router-link>
+                        <div class="circle"></div>
+                        <img src="img/jeu_la_bonne_paye.png" class="jeu">
+                    </div>
+                    <div class="box">
+                        <h2 class="name">Échecs</h2>
+                        <a href="#" class="infos">Accéder</a>
+                        <div class="circle"></div>
+                        <img src="img/jeu_echecs.jpg" class="jeu">
+                    </div>
+                    <div class="box">
+                        <h2 class="name">Jungle Speed</h2>
+                        <a href="#" class="infos">Accéder</a>
+                        <div class="circle"></div>
+                        <img src="img/jeu_jungle_speed.jpg" class="jeu">
+                    </div>
+                    <div class="box">
+                        <h2 class="name">Petits Chevaux</h2>
+                        <a href="#" class="infos">Accéder</a>
+                        <div class="circle"></div>
+                        <img src="img/jeu_petits_chevaux.png" class="jeu">
+                    </div>
+                    <div class="box">
+                        <h2 class="name">Poker</h2>
+                        <a href="#" class="infos">Accéder</a>
+                        <div class="circle"></div>
+                        <img src="img/jeu_poker.jpeg" class="jeu">
+                    </div>
+                    <div class="box">
+                        <h2 class="name">Cluedo</h2>
+                        <a href="#" class="infos">Accéder</a>
+                        <div class="circle"></div>
+                        <img src="img/jeu_cluedo.png" class="jeu">
+                    </div>
+                </div>
+            </div>
             </main>
             
             </div>

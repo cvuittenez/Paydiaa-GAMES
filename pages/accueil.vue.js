@@ -5,21 +5,23 @@ var Accueil = Vue.component('Accueil',{
             <img src="img/fond.png" alt="fond" class="fond">
             <div class="barre-de-recherche">
                 <input type="search" id="site-search" name="q" aria-label="Rechercher un jeu" placeholder="Rechercher un jeu...">
-                <a class="voir-jeux" href="jeux.html">Voir tous les jeux</a>
+                <router-link class="voir-jeux" to="/jeux">Voir tous les jeux</router-link>
             </div>
             <div class="jeux_semaine">
                 <h2>Jeux de la semaine</h2>
-                <div class="contenu_semaine">
+                <div class="contenu_semaine"   v-for="accueil in accueilList" v-bind::item="accueil" ::key="accueil.id">
                     <div class="contenu_gauche">
-                        <img src="img/la_bonne_paye.png" alt="La Bonne Paye">
+                        <img v-bind:src="accueil.image">
                         <button class="voir_règles" type="button">Voir les règles</button>
                     </div>
                     <div class="contenu_droite">
                         <div>
-                            <h4>La Bonne Paye</h4>
-                            <p>Jeu de société, à jouer a plusieurs (2 joueurs minimum)</p>
+                            <h4>{{accueil.titre}}</h4>
+                            <p>{{accueil.description}}({{accueil.joueurs}} joueurs minimum)</p>
                         </div>
+                        <router-link to="/jeu">
                         <button class="voir_jeu" type="button">Voir la page du jeu</button>
+                        </router-link>
                     </div>
                 </div>
             </div>
@@ -42,7 +44,7 @@ var Accueil = Vue.component('Accueil',{
                         <h2 class="name">Jeux de stratégie</h2>
                         <a href="#" class="infos">Accéder</a>
                         <div class="circle"></div>
-                        <img src="img/carte_jeux_de_stratégie.png" class="jeu">
+                        <img src="img/carte_jeux_de_strategie.png" class="jeu">
                     </div>
                     <div class="box">
                         <h2 class="name">Jeux pour enfants</h2>
@@ -91,8 +93,20 @@ var Accueil = Vue.component('Accueil',{
     
     
     `,
-    data(){
-        return{}
+    data() {
+        return {
+            accueilList: []
+        }
+    },
+    mounted() {
+        axios.get('./json/accueil.json')
+            .then(response => {
+                this.accueilList = response.data;
+                console.log("Accueil list", this.accueilList);
+            })
+            .catch(function (error){
+                console.log(error)
+            })
     },
     methods: {}
 });

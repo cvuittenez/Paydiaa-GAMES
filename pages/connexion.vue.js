@@ -2,9 +2,8 @@ var Connexion = Vue.component('Connexion',{
     template:`
        
        <div class="template">
-       
       <main>
-            <img src="../img/fond2.png" alt="fond2" class="fond">
+            <img src="img/fond2.png" alt="fond2" class="fond">
             <div class="connexion">
                 <p class="texte_connexion">Nom d'utilisateur</p>
                 <input type="text" name="name" id="nom_utilisateur" required>
@@ -18,40 +17,40 @@ var Connexion = Vue.component('Connexion',{
                 <section class="carousel">
                     <ul class="carousel-items">
                         <li class="carousel-item">
-                            <img src="../img/avatar1.png">
+                            <img src="img/avatar1.png">
                         </li>
                         <li class="carousel-item">
-                            <img src="../img/avatar2.png">
+                            <img src="img/avatar2.png">
                         </li>
                         <li class="carousel-item">
-                            <img src="../img/avatar3.png">
+                            <img src="img/avatar3.png">
                         </li>
                         <li class="carousel-item">
-                            <img src="../img/avatar4.png">
+                            <img src="img/avatar4.png">
                         </li>
                         <li class="carousel-item">
-                            <img src="../img/avatar5.png">
+                            <img src="img/avatar5.png">
                         </li>
                         <li class="carousel-item">
-                            <img src="../img/avatar6.png">
+                            <img src="img/avatar6.png">
                         </li>
                         <li class="carousel-item">
-                            <img src="../img/avatar7.png">
+                            <img src="img/avatar7.png">
                         </li>
                         <li class="carousel-item">
-                            <img src="../img/avatar8.png">
+                            <img src="img/avatar8.png">
                         </li>
                         <li class="carousel-item">
-                            <img src="../img/avatar9.png">
+                            <img src="img/avatar9.png">
                         </li>
                         <li class="carousel-item">
-                            <img src="../img/avatar10.png">
+                            <img src="img/avatar10.png">
                         </li>
                         <li class="carousel-item">
-                            <img src="../img/avatar11.png">
+                            <img src="img/avatar11.png">
                         </li>
                         <li class="carousel-item">
-                            <img src="../img/avatar12.png">
+                            <img src="img/avatar12.png">
                         </li>
                     </ul>
                 </section>
